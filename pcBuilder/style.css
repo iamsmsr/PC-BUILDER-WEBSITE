@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Light background color for the entire page */
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.row label {
+    font-weight: bold;
+    width: 150px;
+}
+
+.row .selected-item {
+    flex: 1;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.price {
+    margin-right: 20px; /* Space between price and select button */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between quantity controls and price */
+}
+
+.quantity-controls .quantity-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.quantity-controls .quantity-button:hover {
+    background-color: #0056b3;
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.row .select-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.row .select-button:hover {
+    background-color: #0056b3;
+}
+
+.total-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-price {
+    font-size: 1.2em;
+    text-align: right;
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.reset-form {
+    margin: 0;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reset-button:hover {
+    background-color: #cc0000;
+}
+
+.print-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #0056b3;
+}
+
+/* Header and Footer styles */
+.header, .footer {
+    background-color: #333; /* Adjust this color to your preference */
+    color: white; /* Text color */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Header specific styles */
+.header {
+    background-color: #007bff; /* Same color as buttons */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Spreads left and right to edges */
+    align-items: center;
+    height: 60px; /* Adjust height for the header */
+    position: relative;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    color: white;
+    text-decoration: none;
+    background-color: #0056b3;
+    padding: 8px 15px; /* Adjusted padding */
+    font-size: 14px; /* Adjusted font size */
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.header-button:hover {
+    background-color: #003d7a;
+}
+
+h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center; /* Center the title */
+}
+
+/* Print-specific styles */
+@media print {
+    .print-button, .reset-button {
+        display: none; /* Hide buttons when printing */
+    }
+    .row {
+        border: none; /* Remove border for a cleaner printout */
+        padding: 0;   /* Remove padding if needed */
+    }
+    .total-price, .row label, .selected-item, .price, .quantity-controls {
+        display: block; /* Ensure all elements are displayed properly */
+    }
+}
+
